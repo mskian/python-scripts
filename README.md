@@ -1,2 +1,3 @@
-# python-scripts
-Learn Python
+# python Scripts
+
+Learning Python

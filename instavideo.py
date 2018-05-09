@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-## Instagram Post Image Downloader
+## Instagram Post Video Downloader
 ## Install Python pip Modules
 
 # Python2 (pip)
@@ -28,15 +28,15 @@ url = input("\033[1;32mEnter a Instagram Post URL : \033[1;m")
 insta_post = urlopen(url)
 bs = BeautifulSoup(insta_post , "lxml")
 
-## Find Insta Post Image URL
-metatag = bs.find("meta", {"property": "og:image"})
+## Find Insta Post Video URL
+metatag = bs.find("meta", {"property": "og:video:secure_url"})
 
 if metatag is not None:
 
     print (metatag["content"])
     print ("\n")
 
-    print ("Image Started Downloading.......")
+    print ("Video Started Downloading.......")
 
     ## Download Image via Wget
     filename = wget.download(metatag["content"])
@@ -44,6 +44,6 @@ if metatag is not None:
 
     print ("Done")
     print ("\n")
-
+    
 else:
     print ("Error")

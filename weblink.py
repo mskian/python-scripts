@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+## Scrape Internal Links & External Links
 ## Install Python pip Modules
 
 # Python2 (pip)

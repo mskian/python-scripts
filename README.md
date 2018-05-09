@@ -1,3 +1,3 @@
-# python Scripts
+# Python Scripts
 
-Learning Python
+Learning Python 📖

@@ -15,7 +15,7 @@ import wget
 URL = input("\033[1;32mEnter a Instagram Post URL : \033[1;m")
 
 INSTA_POST = urlopen(URL)
-BS = BeautifulSoup(INSTA_POST, "lxml")
+BS = BeautifulSoup(INSTA_POST, "html.parser")
 
 ## Find Insta Post Image
 METATAG = BS.find("meta", {"property": "og:image"})

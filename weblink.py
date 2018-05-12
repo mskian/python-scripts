@@ -16,7 +16,7 @@ URL = input("\033[1;32m Enter a URL : \033[1;m")
 
 SCRAPER = cfscrape.create_scraper()
 CFURL = SCRAPER.get(URL).content
-SOUP = BeautifulSoup(CFURL, "lxml") #html.parser
+SOUP = BeautifulSoup(CFURL, "html.parser") #html.parser
 for link in SOUP.findAll('a', attrs={'href': re.compile("^(http|https)://")}):
 
     urls = link.get("href")
